@@ -62,7 +62,7 @@ export default {
   padding: .1rem
 
   .item-title
-    line-he  ight: .54rem
+    line-height: .54rem
     font-size: .32rem
     ellipsis()
 
