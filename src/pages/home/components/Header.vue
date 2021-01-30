@@ -6,10 +6,14 @@
       </div>
       <div class="header-input">
         <span class="iconfont">&#xe632;</span>
-        输入城市/景点/游玩主题</div>
-      <div class="header-right">{{ this.city }}
-        <span class="iconfont arrow-icon">&#xe6aa;</span>
+        输入城市/景点/游玩主题
       </div>
+      <router-link to="/city">
+        <div class="header-right">
+          {{ this.city }}
+          <span class="iconfont arrow-icon">&#xe6aa;</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -26,16 +30,19 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "~@/assets/styles/varibles.styl"
 .header
-  line-height: .86rem
+  line-height: $headerHeight
   background: $bgColor
   color: #fff
   display: flex
+
   .header-left
     width: .64rem
     float: left
+
     .back-icon
       text-align: center
       font-size: .4rem
+
   .header-input
     flex: 1
     height: .64rem
@@ -46,10 +53,13 @@ export default {
     background: #fff
     border-radius: .1rem
     color: #ccc
+
   .header-right
     width: 1.24rem
     float: right
     text-align: center
+    color: white
+
     .arrow-icon
       margin-left: -.04rem
       font-size: .35rem
