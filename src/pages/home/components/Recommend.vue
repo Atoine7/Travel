@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <img class="item-img"
              :src="item.imgUrl">
         <div class="item-info">
@@ -18,25 +18,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1904/45/45480d5910fab083a3.img.jpg_200x200_0d06f646.jpg',
-        title: '武隆仙女山国家森林公园',
-        desc: '又一个仙女下凡调戏牧童的故事'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1904/45/45480d5910fab083a3.img.jpg_200x200_0d06f646.jpg',
-        title: '武隆仙女山国家森林公园',
-        desc: '又一个仙女下凡调戏牧童的故事'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1904/45/45480d5910fab083a3.img.jpg_200x200_0d06f646.jpg',
-        title: '武隆仙女山国家森林公园',
-        desc: '又一个仙女下凡调戏牧童的故事'
-      }]
-    }
+    return {}
   }
 }
 </script>
