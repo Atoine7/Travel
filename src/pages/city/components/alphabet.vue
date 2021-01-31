@@ -36,9 +36,6 @@ export default {
       timer: null
     }
   },
-  updated () {
-    this.strtY = this.$refs['A'][0].offsetTop
-  },
   methods: {
     handleletterClick (e) {
       this.$emit('change', e.target.innerText)
@@ -52,12 +49,13 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
+          const startY = this.$refs['A'][0].offsetTop
           const touchY = e.touches[0].clientY - 79
-          const index = Math.floor((touchY - this.startY) / 20)
+          const index = Math.floor((touchY - startY) / 19.4)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 16)
+        }, 8)
       }
     },
     handleTouchEnd () {
