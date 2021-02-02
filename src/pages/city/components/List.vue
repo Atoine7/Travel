@@ -78,6 +78,9 @@ export default {
     this.scroll = new BScroll(this.$refs.wrapper, {
       click: true
     })
+  },
+  updated () {
+    this.scroll.refresh()
   }
 }
 </script>
