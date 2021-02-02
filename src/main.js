@@ -6,17 +6,13 @@ import store from './store/index'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
-// import 'swiper/dis/css/swiper.css'
 require('swiper/dist/css/swiper.css')
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
   store,
-  components: {App},
-  template: '<App/>'
-})
+  render: h => h(App)
+}).$mount('#app')
